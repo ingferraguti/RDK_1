@@ -2,12 +2,10 @@ import { combineReducers } from "redux";
 
 // START IMPORT REDUCERS
 import BlockEditReducer from "./BlockEditReducer";
-import BlockEditReducer from "./BlockEditReducer";
 import BlockListReducer from "./BlockListReducer";
 import BlockTypeEditReducer from "./BlockTypeEditReducer";
 import BlockTypeListReducer from "./BlockTypeListReducer";
 import HomeReducer from "./HomeReducer";
-import ItemEditReducer from "./ItemEditReducer";
 import ItemEditReducer from "./ItemEditReducer";
 import ItemListReducer from "./ItemListReducer";
 import RoleEditReducer from "./RoleEditReducer";
