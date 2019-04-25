@@ -90,6 +90,22 @@ class BlockTypeApiGenerated {
   }
 
   /**
+  * BlockTypeService.getItemType
+  *   @description CRUD ACTION getItemType
+  *   @param Objectid id ID of BlockType from ItemType
+  *
+  */
+  static getItemType(id) {
+    return axios.get(BlockTypeApiGenerated.contextUrl + '/' + id + 'getItemType' )
+      .then(response => {
+        return response.data;
+      })
+      .catch(error => {
+        throw error;
+      });
+  }
+
+  /**
   * BlockTypeService.list
   *   @description CRUD ACTION list
   *

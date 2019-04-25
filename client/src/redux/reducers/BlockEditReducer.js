@@ -20,8 +20,8 @@ export default function BlockEditReducer(state = initialState, action) {
       return { ...state, block: action.payload };
     case types.LIST_BLOCKTYPE_SUCCESS:
       return { ...state, listBlockType: action.payload };
-    case types.LIST_TYPE_SUCCESS:
-      return { ...state, listType: action.payload };
+    case types.LIST_ITEMTYPE_SUCCESS:
+      return { ...state, listItemType: action.payload };
     case types.UPDATE_BLOCK_SUCCESS:
       return { ...state, block: action.payload };
      // END REDUCERS

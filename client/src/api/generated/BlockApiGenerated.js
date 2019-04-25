@@ -58,6 +58,54 @@ class BlockApiGenerated {
   }
 
   /**
+  * BlockService.findByActyve
+  *   @description CRUD ACTION findByActyve
+  *   @param Objectid key Id of the resource Actyve to search
+  *
+  */
+  static findByActyve(id) {
+    return axios.get(BlockApiGenerated.contextUrl + "/findByActyve/" + id )
+      .then(response => {
+        return response.data;
+      })
+      .catch(error => {
+        throw error;
+      });
+  }
+
+  /**
+  * BlockService.findByBlockType
+  *   @description CRUD ACTION findByBlockType
+  *   @param Objectid key Id of the resource BlockType to search
+  *
+  */
+  static findByBlockType(id) {
+    return axios.get(BlockApiGenerated.contextUrl + "/findByBlockType/" + id )
+      .then(response => {
+        return response.data;
+      })
+      .catch(error => {
+        throw error;
+      });
+  }
+
+  /**
+  * BlockService.findByFontendAPIHook
+  *   @description CRUD ACTION findByFontendAPIHook
+  *   @param Objectid key Id of the resource FontendAPIHook to search
+  *
+  */
+  static findByFontendAPIHook(id) {
+    return axios.get(BlockApiGenerated.contextUrl + "/findByFontendAPIHook/" + id )
+      .then(response => {
+        return response.data;
+      })
+      .catch(error => {
+        throw error;
+      });
+  }
+
+  /**
   * BlockService.get
   *   @description CRUD ACTION get
   *   @param ObjectId id Id 
@@ -65,6 +113,22 @@ class BlockApiGenerated {
   */
   static getOneBlock(id) {
     return axios.get(BlockApiGenerated.contextUrl + "/" + id)
+      .then(response => {
+        return response.data;
+      })
+      .catch(error => {
+        throw error;
+      });
+  }
+
+  /**
+  * BlockService.getBlockType
+  *   @description CRUD ACTION getBlockType
+  *   @param Objectid id ID of Block from BlockType
+  *
+  */
+  static getBlockType(id) {
+    return axios.get(BlockApiGenerated.contextUrl + '/' + id + 'getBlockType' )
       .then(response => {
         return response.data;
       })

@@ -58,6 +58,71 @@ class ItemApiGenerated {
   }
 
   /**
+  * ItemService.findByActive
+  *   @description CRUD ACTION findByActive
+  *   @param Objectid key Id of the resource Active to search
+  *
+  */
+  static findByActive(id) {
+    return axios.get(ItemApiGenerated.contextUrl + "/findByActive/" + id )
+      .then(response => {
+        return response.data;
+      })
+      .catch(error => {
+        throw error;
+      });
+  }
+
+  /**
+  * ItemService.findByCreated
+  *   @description CRUD ACTION findByCreated
+  *   @param Integer by start date
+  *   @param Integer to end date
+  *
+  */
+  static findByCreated(id) {
+    return axios.get(ItemApiGenerated.contextUrl + "/findByCreated/" + id )
+      .then(response => {
+        return response.data;
+      })
+      .catch(error => {
+        throw error;
+      });
+  }
+
+  /**
+  * ItemService.findByCreator
+  *   @description CRUD ACTION findByCreator
+  *   @param Objectid key Id of the resource Creator to search
+  *
+  */
+  static findByCreator(id) {
+    return axios.get(ItemApiGenerated.contextUrl + "/findByCreator/" + id )
+      .then(response => {
+        return response.data;
+      })
+      .catch(error => {
+        throw error;
+      });
+  }
+
+  /**
+  * ItemService.findByProtected
+  *   @description CRUD ACTION findByProtected
+  *   @param Objectid key Id of the resource Protected to search
+  *
+  */
+  static findByProtected(id) {
+    return axios.get(ItemApiGenerated.contextUrl + "/findByProtected/" + id )
+      .then(response => {
+        return response.data;
+      })
+      .catch(error => {
+        throw error;
+      });
+  }
+
+  /**
   * ItemService.findByType
   *   @description CRUD ACTION findByType
   *   @param Objectid key Id della risorsa Type da cercare
@@ -81,22 +146,6 @@ class ItemApiGenerated {
   */
   static getOneItem(id) {
     return axios.get(ItemApiGenerated.contextUrl + "/" + id)
-      .then(response => {
-        return response.data;
-      })
-      .catch(error => {
-        throw error;
-      });
-  }
-
-  /**
-  * ItemService.getLink
-  *   @description CRUD ACTION getLink
-  *   @param Objectid id ID of Item from Link
-  *
-  */
-  static getLink(id) {
-    return axios.get(ItemApiGenerated.contextUrl + '/' + id + 'getLink' )
       .then(response => {
         return response.data;
       })

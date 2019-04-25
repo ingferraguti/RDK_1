@@ -61,6 +61,44 @@ let actionsFunction = {
   },
 
 
+  // Find by RolePrivileges
+  findByRolePrivileges: function(key) {
+    return function(dispatch) {
+      return UserApi
+        .findByRolePrivileges(key)
+        .then(item => {
+          dispatch(actionsFunction.findByRolePrivilegesSuccess(item));
+        })
+        .catch(error => {
+          throw error;
+        });
+    };
+  },
+
+  findByRolePrivilegesSuccess: function(item) {
+    return { type: types.FINDBYROLEPRIVILEGES_USER_SUCCESS, payload: item };
+  },
+
+
+  // Find by mail
+  findBymail: function(key) {
+    return function(dispatch) {
+      return UserApi
+        .findBymail(key)
+        .then(item => {
+          dispatch(actionsFunction.findBymailSuccess(item));
+        })
+        .catch(error => {
+          throw error;
+        });
+    };
+  },
+
+  findBymailSuccess: function(item) {
+    return { type: types.FINDBYMAIL_USER_SUCCESS, payload: item };
+  },
+
+
   // Get user
   loadUser: function(id) {
     return function(dispatch) {
