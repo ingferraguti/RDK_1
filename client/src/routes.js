@@ -15,10 +15,10 @@ import BlockTypeEdit from "./pages/BlockTypeEdit";
 import BlockTypeList from "./pages/BlockTypeList";
 import ItemEdit from "./pages/ItemEdit";
 import ItemList from "./pages/ItemList";
+import ItemTypeEdit from "./pages/ItemTypeEdit";
+import ItemTypeList from "./pages/ItemTypeList";
 import RoleEdit from "./pages/RoleEdit";
 import RoleList from "./pages/RoleList";
-import TypeEdit from "./pages/TypeEdit";
-import TypeList from "./pages/TypeList";
 
 /* END MY VIEWS IMPORT */
 
@@ -49,17 +49,15 @@ class Routes extends Component {
               {/* START MY VIEWS */}
 
               <PrivateRoute exact path="/blocks/:id" component={ BlockEdit }  />
-              <PrivateRoute exact path="/blocks/:id" component={ BlockEdit }  />
               <PrivateRoute exact path="/blocks" component={ BlockList } roles={[ 'ADMIN', ]}  />
               <PrivateRoute exact path="/blocktypes/:id" component={ BlockTypeEdit }  />
               <PrivateRoute exact path="/blocktypes" component={ BlockTypeList }  />
               <PrivateRoute exact path="/items/:id" component={ ItemEdit }  />
-              <PrivateRoute exact path="/items/:id" component={ ItemEdit }  />
               <PrivateRoute exact path="/items" component={ ItemList }  />
+              <PrivateRoute exact path="/types/:id" component={ ItemTypeEdit }  />
+              <PrivateRoute exact path="/types" component={ ItemTypeList }  />
               <PrivateRoute exact path="/roles/:id" component={ RoleEdit }  />
               <PrivateRoute exact path="/roles" component={ RoleList }  />
-              <PrivateRoute exact path="/types/:id" component={ TypeEdit }  />
-              <PrivateRoute exact path="/types" component={ TypeList }  />
 
              {/* END MY VIEWS */}
 

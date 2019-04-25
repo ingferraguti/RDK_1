@@ -98,6 +98,25 @@ let actionsFunction = {
     return { type: types.GET_BLOCKTYPE_SUCCESS, payload: blocktype };
   },
 
+	
+	// Get relation ItemType
+  getItemType: function(id) {
+    return function(dispatch) {
+      return BlockTypeApi
+        .getItemType(id)
+        .then(item => {
+          dispatch(actionsFunction.getItemTypeSuccess(item));
+        })
+        .catch(error => {
+          throw error;
+        });
+    };
+  },
+
+  getItemTypeSuccess: function(item) {
+    return { type: types.GETITEMTYPE_BLOCKTYPE_SUCCESS, payload: item };
+  },
+
   // Load  list
   loadBlockTypeList: function() {
     return function(dispatch) {

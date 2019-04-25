@@ -23,7 +23,7 @@ import FormControlLabel from "@material-ui/core/FormControlLabel";
 
 // START IMPORT ACTIONS
 import ItemActions from "../redux/actions/ItemActions";
-import TypeActions from "../redux/actions/TypeActions";
+import ItemTypeActions from "../redux/actions/ItemTypeActions";
 
 // END IMPORT ACTIONS
 
@@ -36,10 +36,7 @@ import TypeActions from "../redux/actions/TypeActions";
 *	@description CRUD ACTION get
 *	@param ObjectId id - Id 
 *
-* actionsUser.list
-*	@description CRUD ACTION list
-*
-* actionsType.list
+* actionsItemType.list
 *	@description CRUD ACTION list
 *
 * actionsItem.list

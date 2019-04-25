@@ -61,6 +61,82 @@ let actionsFunction = {
   },
 
 
+  // Find by Active
+  findByActive: function(key) {
+    return function(dispatch) {
+      return ItemApi
+        .findByActive(key)
+        .then(item => {
+          dispatch(actionsFunction.findByActiveSuccess(item));
+        })
+        .catch(error => {
+          throw error;
+        });
+    };
+  },
+
+  findByActiveSuccess: function(item) {
+    return { type: types.FINDBYACTIVE_ITEM_SUCCESS, payload: item };
+  },
+
+
+  // Find by Created
+  findByCreated: function(key) {
+    return function(dispatch) {
+      return ItemApi
+        .findByCreated(key)
+        .then(item => {
+          dispatch(actionsFunction.findByCreatedSuccess(item));
+        })
+        .catch(error => {
+          throw error;
+        });
+    };
+  },
+
+  findByCreatedSuccess: function(item) {
+    return { type: types.FINDBYCREATED_ITEM_SUCCESS, payload: item };
+  },
+
+
+  // Find by Creator
+  findByCreator: function(key) {
+    return function(dispatch) {
+      return ItemApi
+        .findByCreator(key)
+        .then(item => {
+          dispatch(actionsFunction.findByCreatorSuccess(item));
+        })
+        .catch(error => {
+          throw error;
+        });
+    };
+  },
+
+  findByCreatorSuccess: function(item) {
+    return { type: types.FINDBYCREATOR_ITEM_SUCCESS, payload: item };
+  },
+
+
+  // Find by Protected
+  findByProtected: function(key) {
+    return function(dispatch) {
+      return ItemApi
+        .findByProtected(key)
+        .then(item => {
+          dispatch(actionsFunction.findByProtectedSuccess(item));
+        })
+        .catch(error => {
+          throw error;
+        });
+    };
+  },
+
+  findByProtectedSuccess: function(item) {
+    return { type: types.FINDBYPROTECTED_ITEM_SUCCESS, payload: item };
+  },
+
+
   // Find by Type
   findByType: function(key) {
     return function(dispatch) {
@@ -96,25 +172,6 @@ let actionsFunction = {
 
   loadItemSuccess: function(item) {
     return { type: types.GET_ITEM_SUCCESS, payload: item };
-  },
-
-	
-	// Get relation Link
-  getLink: function(id) {
-    return function(dispatch) {
-      return ItemApi
-        .getLink(id)
-        .then(item => {
-          dispatch(actionsFunction.getLinkSuccess(item));
-        })
-        .catch(error => {
-          throw error;
-        });
-    };
-  },
-
-  getLinkSuccess: function(item) {
-    return { type: types.GETLINK_ITEM_SUCCESS, payload: item };
   },
 
 	

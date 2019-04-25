@@ -18,10 +18,8 @@ export default function ItemEditReducer(state = initialState, action) {
       return { ...state, item: action.payload };
     case types.GET_ITEM_SUCCESS:
       return { ...state, item: action.payload };
-    case types.LIST_USER_SUCCESS:
-      return { ...state, listUser: action.payload };
-    case types.LIST_TYPE_SUCCESS:
-      return { ...state, listType: action.payload };
+    case types.LIST_ITEMTYPE_SUCCESS:
+      return { ...state, listItemType: action.payload };
     case types.LIST_ITEM_SUCCESS:
       return { ...state, listItem: action.payload };
     case types.UPDATE_ITEM_SUCCESS:

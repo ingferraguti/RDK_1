@@ -61,6 +61,63 @@ let actionsFunction = {
   },
 
 
+  // Find by Actyve
+  findByActyve: function(key) {
+    return function(dispatch) {
+      return BlockApi
+        .findByActyve(key)
+        .then(item => {
+          dispatch(actionsFunction.findByActyveSuccess(item));
+        })
+        .catch(error => {
+          throw error;
+        });
+    };
+  },
+
+  findByActyveSuccess: function(item) {
+    return { type: types.FINDBYACTYVE_BLOCK_SUCCESS, payload: item };
+  },
+
+
+  // Find by BlockType
+  findByBlockType: function(key) {
+    return function(dispatch) {
+      return BlockApi
+        .findByBlockType(key)
+        .then(item => {
+          dispatch(actionsFunction.findByBlockTypeSuccess(item));
+        })
+        .catch(error => {
+          throw error;
+        });
+    };
+  },
+
+  findByBlockTypeSuccess: function(item) {
+    return { type: types.FINDBYBLOCKTYPE_BLOCK_SUCCESS, payload: item };
+  },
+
+
+  // Find by FontendAPIHook
+  findByFontendAPIHook: function(key) {
+    return function(dispatch) {
+      return BlockApi
+        .findByFontendAPIHook(key)
+        .then(item => {
+          dispatch(actionsFunction.findByFontendAPIHookSuccess(item));
+        })
+        .catch(error => {
+          throw error;
+        });
+    };
+  },
+
+  findByFontendAPIHookSuccess: function(item) {
+    return { type: types.FINDBYFONTENDAPIHOOK_BLOCK_SUCCESS, payload: item };
+  },
+
+
   // Get block
   loadBlock: function(id) {
     return function(dispatch) {
@@ -77,6 +134,25 @@ let actionsFunction = {
 
   loadBlockSuccess: function(block) {
     return { type: types.GET_BLOCK_SUCCESS, payload: block };
+  },
+
+	
+	// Get relation BlockType
+  getBlockType: function(id) {
+    return function(dispatch) {
+      return BlockApi
+        .getBlockType(id)
+        .then(item => {
+          dispatch(actionsFunction.getBlockTypeSuccess(item));
+        })
+        .catch(error => {
+          throw error;
+        });
+    };
+  },
+
+  getBlockTypeSuccess: function(item) {
+    return { type: types.GETBLOCKTYPE_BLOCK_SUCCESS, payload: item };
   },
 
   // Load  list

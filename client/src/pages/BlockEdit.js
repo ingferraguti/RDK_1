@@ -24,7 +24,7 @@ import FormControlLabel from "@material-ui/core/FormControlLabel";
 // START IMPORT ACTIONS
 import BlockActions from "../redux/actions/BlockActions";
 import BlockTypeActions from "../redux/actions/BlockTypeActions";
-import TypeActions from "../redux/actions/TypeActions";
+import ItemTypeActions from "../redux/actions/ItemTypeActions";
 
 // END IMPORT ACTIONS
 
@@ -40,7 +40,7 @@ import TypeActions from "../redux/actions/TypeActions";
 * actionsBlockType.list
 *	@description CRUD ACTION list
 *
-* actionsType.list
+* actionsItemType.list
 *	@description CRUD ACTION list
 *
 * actionsBlock.update
